@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="signupviewModel"
+            type="water.viewmodel.SignUpViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_color">
+
+                <TextView
+                    android:id="@+id/tv_login_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_80"
+                    android:text="@string/signup"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/fontSize_30"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_login_enjoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/enter_sign_up"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_grey"
+                    android:textSize="@dimen/fontSize_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_login_now" />
+
+                <LinearLayout
+                    android:id="@+id/lin_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_16"
+                    android:layout_marginTop="@dimen/dp_80"
+                    android:layout_marginRight="@dimen/padding_16"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_login_enjoy">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/lin_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dp_4"
+                            android:weightSum="2"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/iv_profile"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:padding="@dimen/padding_4"
+                                android:text="@string/otp"
+                                android:textColor="@color/light_grey"
+                                android:textSize="@dimen/fontSize_12"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_signup_profile"
+                              />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/et_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.8"
+                                android:afterTextChanged="@{(editable)->signupviewModel.afterTextChanged(editable,1)}"
+                                android:backgroundTint="@color/text_gray"
+                                android:focusableInTouchMode="true"
+                                android:hint="@string/hint_name"
+                                android:imeOptions="actionNext"
+                                android:inputType="textAutoComplete"
+                                android:paddingStart="@dimen/padding_8"
+                                android:textColor="@color/text_gray"
+                                android:textColorHint="@color/text_gray"
+                                android:textSize="@dimen/fontSize_14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lin_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dp_4"
+                            android:weightSum="2"
+                            app:layout_constraintTop_toBottomOf="@+id/lin_profile">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:padding="@dimen/padding_4"
+                                android:text="@string/otp"
+                                android:textColor="@color/light_grey"
+                                android:textSize="@dimen/fontSize_12"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_signup_message"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/et_email"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.8"
+                                android:afterTextChanged="@{(editable)->signupviewModel.afterTextChanged(editable,2)}"
+                                android:backgroundTint="@color/text_gray"
+                                android:hint="@string/hint_message"
+                                android:imeOptions="actionNext"
+                                android:inputType="textEmailAddress"
+                                android:paddingStart="@dimen/padding_8"
+                                android:textColor="@color/text_gray"
+                                android:textColorHint="@color/text_gray"
+                                android:textSize="@dimen/fontSize_14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lin_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dp_4"
+                            android:weightSum="2"
+                            app:layout_constraintTop_toBottomOf="@+id/lin_message">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:padding="@dimen/padding_4"
+                                android:text="@string/otp"
+                                android:textColor="@color/light_grey"
+                                android:textSize="@dimen/fontSize_12"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+
+                                app:srcCompat="@drawable/ic_signup_chat" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.8"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="+91"
+                                    android:textColor="@color/text_gray"
+                                    android:textColorHint="@color/text_gray"
+                                    android:textSize="@dimen/fontSize_16" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_mobile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:afterTextChanged="@{(editable)->signupviewModel.afterTextChanged(editable,3)}"
+                                    android:backgroundTint="@color/text_gray"
+                                    android:ems="10"
+                                    android:hint="@string/hint_mobile"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="number"
+                                    android:maxLength="10"
+                                    android:maxLines="1"
+                                    android:paddingStart="@dimen/dp_8"
+                                    android:singleLine="true"
+                                    android:textColor="@color/text_gray"
+                                    android:textColorHint="@color/text_gray"
+                                    android:textSize="@dimen/fontSize_14" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/lin_click_age"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dp_4"
+                            android:weightSum="2"
+                            app:layout_constraintTop_toBottomOf="@+id/lin_phone">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:padding="@dimen/padding_4"
+                                android:text="@string/otp"
+                                android:textColor="@color/light_grey"
+                                android:textSize="@dimen/fontSize_12"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:tint="@color/text_gray"
+                                app:srcCompat="@drawable/ic_signup_birthday" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/et_age"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.8"
+                                android:afterTextChanged="@{(editable)->signupviewModel.afterTextChanged(editable,6)}"
+                                android:backgroundTint="@color/light_grey"
+                                android:cursorVisible="false"
+                                android:focusable="false"
+                                android:hint="@string/hint_age"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:paddingStart="@dimen/padding_8"
+                                android:textColor="@color/light_grey"
+                                android:textColorHint="@color/light_grey"
+                                android:textSize="@dimen/fontSize_14" />
+                        </LinearLayout>
+
+
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_next"
+                        style="@style/Button.Green"
+                        android:layout_width="150dp"
+                        android:layout_height="@dimen/buttonHeight_40"
+                        android:layout_gravity="center|center_vertical"
+                        android:layout_marginTop="@dimen/padding_24"
+                        android:layout_marginBottom="@dimen/padding_12"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:onClick="@{()->signupviewModel.onHomeScreen()}"
+
+                        android:text="@string/btn_sign_up"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/fontSize_16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lin_mobile" />
+
+                    <LinearLayout
+                        android:id="@+id/lin_already"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center"
+                        android:layout_marginBottom="@dimen/padding_24"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_4"
+                            android:text="@string/alredy_Account"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/fontSize_12"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{()->signupviewModel.onLoginScreen()}"
+                            android:padding="@dimen/padding_4"
+                            android:text="@string/login"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/fontSize_12" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">Bestone Water</string>
+    <string name="alredy_Account">Already have an account?</string>
+    <string name="dont_account">Don\'t have an account?</string>
+    <string name="login">Login</string>
+    <string name="sign_up">SignUp</string>
+    <string name="get_Started">Get Started</string>
+    <string name="welcome">WELCOME</string>
+    <string name="otp">OTP</string>
+    <string name="next">Next</string>
+    <string name="btn_sign_up">Signup</string>
+    <string name="login_now">LOGIN NOW</string>
+    <string name="verfication">VERIFICATION</string>
+    <string name="signup">SIGN UP NOW</string>
+    <string name="enter_sign_up">Signup to enjoy cool stuffs!</string>
+    <string name="resend_otp">Resend OTP?</string>
+    <string name="enter_verifcation">ENTER VERIFICATION CODE TO CONTINUE</string>
+    <string name="hint_mobile">Mobile number</string>
+    <string name="hint_name"> Name</string>
+    <string name="hint_message"> E-mail</string>
+    <string name="hint_password"> password</string>
+    <string name="hint_adhar"> Adhar Card No.</string>
+    <string name="hint_age">D.O.B</string>
+    <string name="hint_nationality">Nationality</string>
+    <string name="ok">Ok</string>
+    <string name="Age_should_be_greater_than_18">Age should be greater than 18 </string>
+
+    <string name="login_enjoy">Login to enjoy cool stuffs!</string>
+    <string name="create_account">Create an account and access thousands\nof cool stuffs</string>
+    <string name="please_Enter_Only_Number">Please Enter correct Mobile Number</string>
+    <string name="please_enter_mobile">Enter  Mobile Number</string>
+    <string name="login_successfully">Login successFully</string>
+    <string name="error_api_failure">Error while getting data from server</string>
+    <string name="Mobile_digit_less_than_10_digit">Mobile digit less than 10 digit</string>
+    <string name="invalid_mobile_number">invalid mobile number</string>
+    <string name="Please_Enter_Only_Number">Please Enter mobile number</string>
+
+    <!-- navigation drawer-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="my_account">My Account</string>
+    <string name="my_orders">My orders</string>
+    <string name="favourite">Favourite</string>
+    <string name="offer">Offers</string>
+    <string name="cart">Cart</string>
+    <string name="near_me">Shop Near me</string>
+    <string name="bulk_order">Bulk Order</string>
+    <string name="help">Help</string>
+    <string name="profile">Profile</string>
+    <string name="wallet">Wallet</string>
+    <string name="scheduler">Scheduler</string>
+    <string name="terms">Terms &amp; Conditions</string>
+    <string name="logout">Logout</string>
+    <string name="liquar_type">Liqour Type</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">No</string>
+
+    <!--activity names-->
+    <string name="activity_login">Login</string>
+    <string name="activity_welcome">Welcome</string>
+    <string name="activity_my_account">My ACCOUNT</string>
+    <string name="activity_my_search">SEARCH</string>
+    <string name="activity_my_cart">MY CART</string>
+    <string name="activity_help">HELP</string>
+    <string name="activity_bulk">MY BULK</string>
+    <string name="activity_add_address">ADD NEW ADDRESS</string>
+    <string name="activity_favourite">FAVOURITE</string>
+    <string name="activity_copuns">COUPON</string>
+    <string name="activity_offers">MY OFFERS</string>
+    <string name="activity_walet">WALLET</string>
+    <string name="activity_shecdule">SCHEDULE</string>
+
+    <string name="activity_near">Shop NEARBY</string>
+    <string name="activity_my_orders">MY ORDERS</string>
+    <string name="label_confirm_exit">Are you sure you want to exit?</string>
+
+    <!-- signup validation-->
+    <string name="signup_success">SignUpSuccessfully</string>
+    <string name="cancel">Cancel</string>
+    <string name="select">Select</string>
+    <string name="hint_search">Search water or Shop</string>
+    <string name="top_item_for_you">Top Item For You</string>
+    <string name="signup_are_compulsory">First name, email, mobile,password,adhar number,age and nationality are compulsory</string>
+    <string name="enter_mobile_No">Enter mobile No.</string>
+    <string name="enter_valid_mobile_No">enter valid mobile No.</string>
+    <string name="top_items_for_you">Top Items For You</string>
+    <string name="view_all">View All</string>
+    <string name="popular_brands">Popular Brands</string>
+    <string name="copun_for_you">Copun For you</string>
+    <string name="chakhna">Chakhna</string>
+    <string name="all_shops_nearby">All Shops NearBy</string>
+
+
+    <string name="location">location</string>
+    <string name="add_to_cart">ADD TO CART</string>
+    <string name="_180ml">180ML</string>
+    <string name="_375ml">375ML</string>
+    <string name="_750ml">750ML</string>
+    <string name="spirit">SPIRIT</string>
+    <string name="cross_republic">Cross Republic</string>
+    <string name="delivered">Delivered</string>
+    <string name="chakana_blue">CHAKANA BLUE</string>
+    <string name="reorder">REORDER</string>
+    <string name="blender_pride">BLENDER PRIDE</string>
+    <string name="GPSAlertDialogTitle">GPS Alert</string>
+    <string name="GPSAlertDialogMessage">GPS Setting</string>
+    <string name="action_settings">yes</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="otp_not_match">OTP did not match</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

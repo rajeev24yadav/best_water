@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mainActivityViewModel"
+            type="water.viewmodel.MainActivityViewModel" />
+    </data>
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/liqour_home_layout"
+            bind:mainActivityViewModel="@{mainActivityViewModel}" />
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:visibility="visible"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_50"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/ln_welcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/padding_24"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_12"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_16"
+                        android:padding="@dimen/padding_4"
+                        android:text="Lucky"
+                        android:textSize="@dimen/fontSize_20"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/editProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/padding_16"
+                        android:padding="@dimen/padding_4"
+                        android:text="Edit"
+                        android:onClick="@{()->mainActivityViewModel.onNavigationSelected(1)}"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/fontSize_14"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tv_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_name"
+                        android:layout_marginStart="@dimen/padding_16"
+                        android:layout_marginBottom="@dimen/padding_4"
+                        android:padding="@dimen/dp_5"
+                        android:text="9971014195"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/fontSize_14" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rel_my_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_12"
+                        android:padding="@dimen/margin_12"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/iv_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_4"
+                            android:src="@drawable/ic_account" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/padding_12"
+                            android:layout_toRightOf="@+id/iv_account"
+                            android:singleLine="true"
+                            android:text="@string/my_account"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#000000"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_12"
+                        android:onClick="@{()->mainActivityViewModel.onNavigationSelected(2)}"
+                        android:padding="@dimen/margin_12">
+
+                        <ImageView
+                            android:id="@+id/iv_orders"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_4"
+                            android:src="@drawable/ic_my_orders" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:layout_toEndOf="@+id/iv_orders"
+                            android:singleLine="true"
+                            android:text="@string/my_orders"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#000000"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_12"
+                        android:onClick="@{()->mainActivityViewModel.onNavigationSelected(3)}"
+                        android:padding="@dimen/margin_12"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/iv_favourite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_4"
+                            android:src="@drawable/ic_favourite" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding_12"
+                            android:layout_toRightOf="@+id/iv_favourite"
+                            android:singleLine="true"
+                            android:text="@string/favourite"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#000000"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_12"
+                        android:onClick="@{()->mainActivityViewModel.onNavigationSelected(4)}"
+                        android:padding="@dimen/margin_12"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/iv_offer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_4"
+                            android:src="@drawable/ic_offer" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/padding_12"
+                            android:layout_toRightOf="@+id/iv_offer"
+                            android:singleLine="true"
+                            android:text="@string/offer"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#000000"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_12"
+                        android:onClick="@{()->mainActivityViewModel.onNavigationSelected(5)}"
+                        android:padding="@dimen/margin_12"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/iv_shop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_4"
+                            android:src="@drawable/ic_shop_near_me" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/padding_12"
+                            android:layout_toRightOf="@+id/iv_shop"
+                            android:singleLine="true"
+                            android:text="@string/near_me"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#000000"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_12"
+                        android:onClick="@{()->mainActivityViewModel.onNavigationSelected(6)}"
+                        android:padding="@dimen/margin_12">
+
+                        <ImageView
+
+                            android:id="@+id/iv_bulk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_4"
+                            android:src="@drawable/ic_bulk" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_toEndOf="@+id/iv_bulk"
+                            android:singleLine="true"
+                            android:text="@string/bulk_order"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#000000"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_12"
+                        android:onClick="@{()->mainActivityViewModel.onNavigationSelected(7)}"
+                        android:padding="@dimen/margin_12"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/iv_help"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_4"
+                            android:src="@drawable/ic_help" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:layout_toEndOf="@+id/iv_help"
+                            android:singleLine="true"
+                            android:text="@string/profile"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#000000"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_12"
+                        android:onClick="@{()->mainActivityViewModel.onNavigationSelected(8)}"
+                        android:padding="@dimen/margin_12"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/iv_wallet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_4"
+                            android:src="@drawable/ic_wallet" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/padding_12"
+                            android:layout_toRightOf="@+id/iv_wallet"
+                            android:singleLine="true"
+                            android:text="@string/wallet"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#000000"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/padding_12"
+                        android:onClick="@{()->mainActivityViewModel.onNavigationSelected(9)}"
+                        android:padding="@dimen/margin_12"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/iv_scheduler"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_4"
+                            android:src="@drawable/ic_wallet" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:layout_toEndOf="@+id/iv_scheduler"
+                            android:singleLine="true"
+                            android:text="@string/terms"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#000000"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_12"
+                        android:onClick="@{()->mainActivityViewModel.onNavigationSelected(10)}"
+                        android:padding="@dimen/margin_12">
+
+                        <ImageView
+                            android:id="@+id/iv_logout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_4"
+                            android:src="@drawable/ic_logout" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_toEndOf="@+id/iv_logout"
+                            android:singleLine="true"
+                            android:text="@string/logout"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#000000"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

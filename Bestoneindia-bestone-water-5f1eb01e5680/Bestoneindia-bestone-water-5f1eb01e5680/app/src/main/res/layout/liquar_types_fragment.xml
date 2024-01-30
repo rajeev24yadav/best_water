@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="liquartypeviewModel"
+            type="water.viewmodel.LiquarTypesViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/banner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pager_height">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPage"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="@dimen/pager_height">
+
+                </androidx.viewpager.widget.ViewPager>
+
+                <water.customView.CirclePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:padding="@dimen/padding_4"
+                    app:fillColor="@color/white"
+                    app:pageColor="@color/skilled_desc_color"
+                    app:snap="true"
+                    app:strokeColor="@color/white" />
+            </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/type_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:gravity="left|center"
+                    android:textAllCaps="true"
+                    android:text="SPIRITS"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:padding="@dimen/dp_8"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/fontSize_30"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/grid_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_8"/>
+        </LinearLayout>
+
+<!--        android:adapter="@{liquartypeviewModel.adapter}"-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

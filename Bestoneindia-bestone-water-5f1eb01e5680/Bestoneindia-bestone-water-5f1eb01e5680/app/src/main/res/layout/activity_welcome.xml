@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="welcomeviewmodel"
+            type="water.viewmodel.ActivityWelcomeViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ln_welcome"
+            android:scaleX="1.3"
+            android:background="@drawable/watericon" />
+
+        <LinearLayout
+            android:id="@+id/ln_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_started"
+            android:layout_marginBottom="@dimen/padding_40"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="@color/text_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_4"
+                android:text="@string/welcome"
+                android:textSize="@dimen/fontSize_30"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_40"
+                android:layout_marginRight="@dimen/padding_40"
+                android:layout_marginBottom="@dimen/padding_4"
+                android:padding="@dimen/padding_8"
+                android:text="@string/create_account"
+                android:textAlignment="center"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/fontSize_14"
+
+                />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_started"
+            style="@style/Button.Green"
+            android:layout_width="160dp"
+            android:layout_height="@dimen/buttonHeight_50"
+            android:layout_above="@+id/lin_already"
+            android:onClick="@{()->welcomeviewmodel.onWelcomeScreen()}"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/padding_4"
+            android:gravity="center"
+            android:text="@string/get_Started"
+            android:textAllCaps="false"
+            android:textSize="@dimen/fontSize_16"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:id="@+id/lin_already"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/buttonHeight_32"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_12">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_4"
+                android:text="@string/alredy_Account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fontSize_12"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_4"
+                android:onClick="@{()->welcomeviewmodel.onWelcomeScreen()}"
+                android:padding="@dimen/padding_4"
+                android:text="@string/login"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/fontSize_12"
+
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

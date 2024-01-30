@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="searchlistViewModel"
+            type="water.viewmodel.SearchViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color">
+
+
+        <RelativeLayout
+            android:id="@+id/lout_header"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#F2F2F2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_toolbar_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:includeFontPadding="false"
+                android:text="@string/activity_my_search"
+                android:textColor="@color/light_black"
+                android:textSize="19sp" />
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:onClick="@{()->searchlistViewModel.onBackPressed()}"
+                android:padding="18dp"
+                android:src="@drawable/back_arrow"
+                app:tint="@color/light_grey"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_16"
+            android:layout_marginTop="@dimen/dp_55"
+            android:layout_marginRight="@dimen/padding_16"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lout_header">
+
+            <TextView
+                android:id="@+id/tv_search_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:includeFontPadding="true"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_12"
+                android:paddingEnd="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_12"
+                android:text="SPIRIT"
+                android:textAllCaps="true"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/fontSize_30"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_search_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_8"
+                android:layout_marginTop="@dimen/dp_12"
+                app:adapter="@{searchlistViewModel.searchItemAdapter}"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_search_list_item_list" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

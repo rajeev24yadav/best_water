@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="nearmodel"
+            type="water.model.NearByListModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_6"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/dp_6"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/dp_16">
+
+                <ImageView
+                    android:id="@+id/iv_chakhna_image"
+                    imageUrl="nearmodel."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:focusable="true"
+                    android:scaleType="fitXY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/login_logo" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginRight="@dimen/dp_6"
+                android:layout_weight="1"
+
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_liqour_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="Bear Bar"
+                        android:paddingStart="@dimen/dp_6"
+                        android:text="@{nearmodel.name}"
+                        android:textColor="#494949"
+                        android:textSize="@dimen/fontSize_14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_6"
+
+                        android:gravity="center_vertical"
+                        android:text="open"
+                        android:textColor="#00B806"
+                        android:textSize="@dimen/fontSize_14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_liqour_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/dp_6"
+                        android:text="civil Lines"
+                        android:textColor="#494949"
+                        android:textSize="@dimen/fontSize_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_liqour_name" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="1dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:background="@color/light_grey"
+                        android:paddingStart="@dimen/dp_6"
+                        android:text="civil Lines"
+                        android:textColor="#494949"
+                        android:textSize="@dimen/fontSize_12"
+                        app:layout_constraintStart_toEndOf="@+id/tv_liqour_name"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_liqour_name" />
+
+                    <TextView
+                        android:id="@+id/tv_liqour_km"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:paddingStart="@dimen/dp_6"
+                        android:text="5 kms"
+                        android:textColor="#494949"
+                        android:textSize="@dimen/fontSize_12"
+                        app:layout_constraintStart_toEndOf="@+id/view"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_liqour_name" />
+
+                    <TextView
+                        android:id="@+id/tv_liqour_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/dp_6"
+                        android:text="3.8"
+                        android:textColor="#494949"
+                        android:layout_marginBottom="@dimen/dp_6"
+                        android:textSize="@dimen/fontSize_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_liqour_address" />
+
+                    <ImageView
+                        android:id="@+id/iv_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/ic_star"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_liqour_min"
+                        app:layout_constraintHorizontal_bias="0.9"
+                        app:layout_constraintStart_toEndOf="@+id/tv_liqour_rating"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_liqour_address" />
+
+                    <TextView
+                        android:id="@+id/tv_liqour_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:layout_marginBottom="@dimen/dp_6"
+                        android:gravity="center_vertical"
+                        android:text="48min"
+                        android:textColor="#494949"
+                        android:textSize="@dimen/fontSize_12"
+                        app:layout_constraintStart_toEndOf="@+id/iv_rating"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_liqour_address" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        >
+    </RelativeLayout>
+</layout>

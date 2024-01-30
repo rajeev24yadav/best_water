@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="gridmodel"
+            type="water.viewmodel.GridViewModel" />
+
+        <variable
+            name="model"
+            type="water.model.RecentListModel" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/gridlayout"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:onClick="@{()->gridmodel.onItemClick()}"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_menu_list"
+            android:layout_width="wrap_content"
+            android:layout_height="168dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/bg_image_selector_white">
+
+            <ImageView
+                android:id="@+id/iv_popular_liquar_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:focusable="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/watericon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+<!--            app:imageUrl="@{model.image}"-->
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/liquar_type_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center"
+            android:hint="@string/spirit"
+            android:text="@{model.name}"
+            android:textAllCaps="true"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/fontSize_20"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</layout>

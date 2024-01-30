@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="homemodel"
+            type="water.viewmodel.HomeViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/lin_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_4"
+                android:gravity="left"
+                android:padding="@dimen/dp_12"
+                android:paddingStart="@dimen/dp_12"
+                app:srcCompat="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/margin_4"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="location"
+                android:textColor="@color/light_grey"
+                android:textSize="@dimen/fontSize_12"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"></androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/lin_location"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:background="@color/background_color"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/banner_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pager_height">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+
+                        >
+
+                    </androidx.viewpager.widget.ViewPager>
+
+                    <water.customView.CirclePageIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:padding="@dimen/padding_4"
+                        app:fillColor="@color/white"
+                        app:pageColor="@color/skilled_desc_color"
+                        app:snap="true"
+                        app:strokeColor="@color/white" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/margin_4"
+                            android:layout_weight="1"
+                            android:gravity="left|center"
+                            android:padding="@dimen/dp_6"
+                            android:text="Top Items For You"
+                            android:textColor="@color/light_black"
+
+                            android:textSize="@dimen/fontSize_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_more_top_items"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/margin_4"
+                            android:layout_weight="1"
+                            android:gravity="right|center"
+                            android:onClick="@{()->homemodel.viewAll()}"
+                            android:text="VIEW ALL"
+                            android:textColor="@color/light_grey"
+                            android:textSize="@dimen/fontSize_12"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_top_items"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:orientation="vertical"
+                        app:adapter="@{homemodel.popularBrandAdapter}"
+                        app:spanCount="2"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        tools:listitem="@layout/layout_popular_brand_list" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "905681134580",
+    "project_id": "apnidaru-5460c",
+    "storage_bucket": "apnidaru-5460c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905681134580:android:1cf731fe409ea093b10fa1",
+        "android_client_info": {
+          "package_name": "com.bestone.water"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905681134580-qir82pge8semvttm4r88a7p8hacdd5ai.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bestone.water",
+            "certificate_hash": "17557bea8130c8e75419b17f4e8e89726f8cfa23"
+          }
+        },
+        {
+          "client_id": "905681134580-iv90bh0cr20ale8e1dcfd3e2cr0qumlp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwP-8kUG7mcjK1sZE05e-qgNK0q1qAt1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905681134580-iv90bh0cr20ale8e1dcfd3e2cr0qumlp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

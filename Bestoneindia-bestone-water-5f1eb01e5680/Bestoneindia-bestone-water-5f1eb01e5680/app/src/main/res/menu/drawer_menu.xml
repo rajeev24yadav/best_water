@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/navigation_account"
+            android:icon="@drawable/ic_account"
+            android:onClick="@{mainActivityViewModel.se}"
+            android:title="@string/my_account" />
+        <item
+            android:id="@+id/navigation_order"
+            android:icon="@drawable/ic_my_orders"
+            android:title="@string/my_orders" />
+        <item
+            android:id="@+id/navigation_favourite"
+            android:icon="@drawable/ic_favourite"
+            android:title="@string/favourite" />
+        <item
+            android:id="@+id/navigation_offers"
+            android:icon="@drawable/ic_offer"
+            android:title="@string/offer" />
+        <item
+            android:id="@+id/navigation_near_me"
+            android:icon="@drawable/ic_shop_near_me"
+            android:title="@string/near_me" />
+        <item
+            android:id="@+id/navigation_bulk_order"
+            android:icon="@drawable/ic_my_orders"
+            android:title="@string/bulk_order" />
+        <item
+            android:id="@+id/navigation_help"
+            android:icon="@drawable/ic_help"
+            android:title="@string/help" />
+        <item
+            android:id="@+id/navigation_wallet"
+            android:icon="@drawable/ic_wallet"
+            android:title="@string/wallet" />
+        <item
+            android:id="@+id/navigation_scheduler"
+            android:icon="@drawable/ic_wallet"
+            android:title="@string/scheduler" />
+        <item
+            android:id="@+id/navigation_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
+    </group>
+</menu>

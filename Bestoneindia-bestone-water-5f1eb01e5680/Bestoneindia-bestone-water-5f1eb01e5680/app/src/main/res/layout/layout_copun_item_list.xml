@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="copunmodel"
+            type="water.model.CopunList" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="210dp"
+        android:layout_height="110dp"
+        android:layout_margin="@dimen/dp_4"
+
+        android:background="@drawable/ic_coupon_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:backgroundTint="#1F8C8F"
+            android:background="@drawable/bg_selector_button_blue">
+
+            <TextView
+                android:id="@+id/tv_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:text="60%"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fontSize_34"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_20"
+                android:layout_marginStart="@dimen/dp_6"
+                android:layout_below="@+id/tv_discount"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/ic_discount_strip">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:text="Discount"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="@dimen/padding_12"
+                    android:textColor="#1F8C8F"
+                    android:textSize="@dimen/fontSize_12"
+                    />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

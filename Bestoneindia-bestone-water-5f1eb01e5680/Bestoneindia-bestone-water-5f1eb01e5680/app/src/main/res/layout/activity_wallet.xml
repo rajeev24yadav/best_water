@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="walletviewModel"
+            type="water.viewmodel.WalletViewModel" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/lout_header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <TextView
+            android:id="@+id/tv_toolbar_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:includeFontPadding="false"
+            android:text="Payment Method"
+            android:textColor="@color/light_grey"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{()->walletviewModel.onBackPressed()}"
+            android:foreground="?selectableItemBackground"
+            android:padding="18dp"
+            android:src="@drawable/back_arrow"
+            app:tint="@color/light_grey"
+            tools:ignore="ContentDescription" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:textSize="@dimen/dp_18"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:text="Chakhna &amp; Shakhna"/>
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:text="Rs 40.00"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:textSize="@dimen/dp_12"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:text="Crossing Republic"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:textSize="@dimen/dp_18"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:text="2 Items"/>
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:text="35 Min"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_location"
+            android:text="2 Items"/>
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="1.8"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:paddingLeft="@dimen/dp_10"
+            android:gravity="start"
+            android:text="228, Raj Nagar, Unnamed Road, Delhi"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:textSize="@dimen/dp_20"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:text="Wallet"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dip"
+            android:layout_weight=".15"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:padding="@dimen/dp_10"
+            android:background="@drawable/ic_payment" />
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:textSize="@dimen/dp_16"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="pay through liquor wallet."/>
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:text="Rs 40.00"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:textSize="@dimen/dp_18"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:text="Other payment methods"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dip"
+            android:layout_weight=".15"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:padding="@dimen/dp_10"
+            android:background="@drawable/ic_card_ic" />
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:textSize="@dimen/dp_16"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="credit / debit card"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_corner_10"
+            android:hint="Card Number"
+            android:inputType="number"
+            android:padding="@dimen/dp_10"/>
+        <EditText
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:textSize="@dimen/dp_16"
+            android:textColor="#000000"
+            android:hint="Expiration"
+            android:inputType="date"
+            android:background="@drawable/bg_white_corner_10"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_corner_10"
+            android:hint="CVV"
+            android:padding="@dimen/dp_10"/>
+        <EditText
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:textSize="@dimen/dp_16"
+            android:textColor="#000000"
+            android:background="@drawable/bg_white_corner_10"
+            android:hint="card holder's name"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/dp_18"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:text="BHIM UPI"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="@dimen/dp_18"
+            android:layout_margin="@dimen/dp_5"
+            android:text="Paytm"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="@dimen/dp_18"
+            android:layout_margin="@dimen/dp_5"
+            android:text="google pay"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_selector_button_blue"
+            android:text="Pay"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:padding="@dimen/dp_10"/>
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:text="Rs 40.00.00"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_selector_button_blue"
+            android:padding="@dimen/dp_10"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+</layout>

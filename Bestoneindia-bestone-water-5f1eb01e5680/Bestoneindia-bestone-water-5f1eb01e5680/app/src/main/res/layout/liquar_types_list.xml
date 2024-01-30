@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="liquartypeModel"
+            type="water.viewmodel.LiquarTypesViewModel" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:elevation="5dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_10">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.5"
+            android:gravity="left|center"
+            android:padding="10dp"
+            android:textAllCaps="true"
+            android:textSize="@dimen/fontSize_24"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/light_black"
+            android:textStyle="bold"
+            tools:text="Indian Whisky" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aroow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="right|center"
+                app:srcCompat="@drawable/ic_arrow_down" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_hide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_10"
+            android:visibility="gone"
+            android:padding="@dimen/dp_8"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:weightSum="2">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_blended"
+                    style="@style/Button.Green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/buttonHeight_40"
+                    android:layout_weight="1"
+                    android:textAllCaps="true"
+                    android:layout_margin="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="Blended"
+                    android:textSize="@dimen/fontSize_16"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_premium"
+                    style="@style/Button.Green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/buttonHeight_40"
+                    android:layout_weight="1"
+                    android:textAllCaps="true"
+                    android:layout_margin="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="Premium"
+                    android:textSize="@dimen/fontSize_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/view_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/fontSize_16"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/light_black"
+                android:textStyle="bold"
+                tools:text="View all" />
+        </LinearLayout>
+
+</LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

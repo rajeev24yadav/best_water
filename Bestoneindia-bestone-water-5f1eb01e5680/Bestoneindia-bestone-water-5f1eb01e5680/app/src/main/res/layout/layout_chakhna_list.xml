@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="chaknamodel"
+            type="water.model.ChakhnaListModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_90"
+            android:layout_margin="@dimen/dp_6"
+            app:cardBackgroundColor="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_top_item"
+                imageUrl="@{chaknamodel.image}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:focusable="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/login_logo" />
+
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

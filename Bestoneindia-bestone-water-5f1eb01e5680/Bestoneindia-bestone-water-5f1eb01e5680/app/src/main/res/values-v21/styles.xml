@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Button">
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_width">@dimen/buttonWidth_148</item>
+        <item name="android:layout_height">@dimen/buttonHeight_32</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+</resources>

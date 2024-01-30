@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="water.viewmodel.OtpViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color">
+
+        <TextView
+            android:id="@+id/tv_login_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_100"
+            android:text="@string/verfication"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/fontSize_30"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_login_enjoy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/enter_verifcation"
+            android:textAlignment="center"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/fontSize_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login_now" />
+
+        <LinearLayout
+            android:id="@+id/lin_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_16"
+            android:layout_marginTop="@dimen/dp_130"
+            android:layout_marginRight="@dimen/padding_16"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login_enjoy">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"
+                android:padding="@dimen/padding_4"
+                android:text="@string/otp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/fontSize_12" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/pinView"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:inputType="number"
+                android:itemBackground="@color/text_color"
+                android:longClickable="true"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:itemCount="4"
+                app:itemHeight="58dp"
+                app:itemRadius="5dp"
+                app:itemSpacing="10dp"
+                app:lineColor="@color/text_color"
+                app:lineWidth="3dp"
+                app:viewType="rectangle" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_40"
+            android:padding="@dimen/padding_4"
+            android:text="@string/resend_otp"
+            android:textColor="@color/light_grey"
+            android:textSize="@dimen/fontSize_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lin_mobile"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next"
+            style="@style/Button.Green"
+            android:layout_width="160dp"
+            android:layout_height="@dimen/buttonHeight_40"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="@dimen/padding_4"
+            android:backgroundTint="@color/blue"
+            android:gravity="center"
+            android:onClick="@{()->viewModel.onOtpVerfication()}"
+            android:text="@string/next"
+            android:textSize="@dimen/fontSize_16"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lin_mobile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

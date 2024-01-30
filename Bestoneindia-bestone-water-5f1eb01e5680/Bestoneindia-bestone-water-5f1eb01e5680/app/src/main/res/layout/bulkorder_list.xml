@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="water.model.TopItemModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp_24"
+        android:layout_margin="@dimen/dp_6"
+        app:cardBackgroundColor="#F7F7F7"
+        android:padding="@dimen/dp_3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_6"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/itemcvard_view"
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="@dimen/dp_150"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="@dimen/dp_6"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/dp_24">
+
+                    <ImageView
+                        android:id="@+id/iv_top_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:focusable="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/water_logo" />
+                  <!--  imageUrl="@{model.image}"-->
+                </androidx.cardview.widget.CardView>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/margin_4">
+
+                    <TextView
+                        android:id="@+id/txt_b_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:text="Bestone Water"
+                        android:textSize="@dimen/dp_18"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_b_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_below="@+id/txt_b_name"
+                        android:text="Rs 10.00"
+                        android:textSize="@dimen/fontSize_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_b_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:text="@string/_750ml"
+                        android:textSize="@dimen/fontSize_16"
+                        android:padding="@dimen/dp_5"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/txt_b_price"/>
+
+                    <TextView
+                        android:id="@+id/txt_b_addtocart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:text=" 10 Pic "
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:singleLine="true"
+                        android:padding="@dimen/dp_5"
+                        android:layout_below="@+id/txt_b_price"
+                        android:background="@drawable/bg_selector_button_blue"
+                        android:layout_toRightOf="@+id/txt_b_weight"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/dp_35"
+                    android:gravity="center"
+                    android:text="@string/_180ml"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontSize_12"
+                    android:background="@drawable/bg_image_weight"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/dp_35"
+                    android:gravity="center"
+                    android:text="@string/_375ml"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontSize_12"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@drawable/bg_image_weight"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/dp_35"
+                    android:gravity="center"
+                    android:text="@string/_750ml"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fontSize_12"
+                    android:background="@drawable/bg_selector_button_blue"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="20 % OFF"
+                    android:textColor="#000000"
+                    android:visibility="invisible"
+                    android:textSize="@dimen/fontSize_12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="20 % OFF"
+                    android:textColor="#000000"
+                    android:visibility="invisible"
+                    android:textSize="@dimen/fontSize_12"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</layout>

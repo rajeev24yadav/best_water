@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="water.model.TopItemModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="155dp"
+        android:layout_height="@dimen/dp_150"
+        android:layout_margin="@dimen/dp_6">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="@dimen/buttonWidth_148"
+            android:layout_margin="@dimen/dp_6"
+            app:cardUseCompatPadding="false"
+            app:cardCornerRadius="@dimen/dp_12"
+            android:background="@color/white"
+            android:layout_height="@dimen/buttonWidth_148"
+            app:cardElevation="@dimen/dp_4"
+            >
+            <ImageView
+                android:id="@+id/iv_top_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/water_logo"
+                android:focusable="true"
+                android:scaleType="fitXY"/>
+           <!-- imageUrl="@{model.image}"-->
+
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

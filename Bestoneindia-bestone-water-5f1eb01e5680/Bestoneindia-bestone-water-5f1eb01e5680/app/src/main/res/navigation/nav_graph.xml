@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="water.view.fragment.HomeFragment"
+        tools:layout="@layout/home_frag" />
+
+    <fragment
+        android:id="@+id/navigation_grid"
+        android:name="water.view.fragment.GridFragment"
+        tools:layout="@layout/grid_frag" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="water.view.fragment.SearchFrag"
+        tools:layout="@layout/search_frag" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="water.view.fragment.ProfileFragment"
+        tools:layout="@layout/profile_fragment" />
+</navigation>

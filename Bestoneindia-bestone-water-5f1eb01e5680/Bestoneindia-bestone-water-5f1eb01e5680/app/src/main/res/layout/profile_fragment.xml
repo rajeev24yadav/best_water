@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="profileviewmodel"
+            type="water.viewmodel.ProfileViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/lout_header"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="55dp">
+
+            <TextView
+                android:id="@+id/tv_toolbar_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:includeFontPadding="false"
+                android:text="@string/activity_my_account"
+                android:textColor="@color/light_grey"
+                android:textSize="19sp" />
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:padding="18dp"
+                android:src="@drawable/back_arrow"
+                app:tint="@color/light_grey"
+                tools:ignore="ContentDescription" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lout_header"
+            android:background="#FAFAFA"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_6"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:paddingStart="@dimen/dp_12"
+                    android:text="DEEPAK"
+                    android:textColor="@color/light_grey"
+                    android:textSize="@dimen/fontSize_16"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:paddingRight="@dimen/dp_12"
+                    android:text="EDIT"
+                    android:textColor="@color/light_grey"
+                    android:textSize="@dimen/fontSize_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp_12"
+                    android:text="7906703537"
+                    android:textColor="@color/light_grey"
+                    android:textSize="@dimen/fontSize_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:paddingStart="@dimen/dp_12"
+                    android:text="user@gmail.com"
+                    android:textColor="@color/light_grey"
+                    android:textSize="@dimen/fontSize_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_mobile" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/lin_contact"
+            android:layout_margin="@dimen/dp_12"
+            android:background="@color/light_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_1"
+            android:layout_marginTop="@dimen/dp_40"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/lin_manage_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp_6"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_manage_address" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:paddingStart="@dimen/dp_12"
+                        android:text="Manage Address"
+                        android:textSize="@dimen/fontSize_14" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_12"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_arrow_forward" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp_6"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@+id/lin_manage_address">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_payment" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:paddingStart="@dimen/dp_12"
+                        android:text="Payment"
+                        android:textSize="@dimen/fontSize_14" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_12"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_arrow_forward" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_favourite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp_6"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@+id/lin_payment">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_favourite" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:paddingStart="@dimen/dp_12"
+                        android:text="Favourite"
+                        android:textSize="@dimen/fontSize_14" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_12"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_arrow_forward" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_offer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp_6"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@+id/lin_favourite">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_offer" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:paddingStart="@dimen/dp_12"
+                        android:text="Offers"
+                        android:textSize="@dimen/fontSize_14" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_12"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_arrow_forward" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_help"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp_6"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@+id/lin_offer">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_help" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2.5"
+                        android:paddingStart="@dimen/dp_12"
+                        android:text="Help"
+                        android:textSize="@dimen/fontSize_14" />
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingBottom="@dimen/dp_6"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:layout_weight="0.3"
+                android:src="@drawable/ic_logout" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2.7"
+                android:paddingStart="@dimen/dp_12"
+                android:text="LOGOUT"
+                android:textColor="@color/light_grey"
+                android:textSize="@dimen/fontSize_16" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
